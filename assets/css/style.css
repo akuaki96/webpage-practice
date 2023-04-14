@@ -1,0 +1,180 @@
+@charset "utf-8";
+/* 文字コードの判別 */
+
+/* ベースのスタイル */
+body {
+  font-family: "Noto Sans JP", "Helvetica Neue", Arial,
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo,
+    sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* section */
+
+.section {
+  padding: 30px 15px;
+}
+
+.section.section-secondary {
+  background-color: #efefef;
+}
+
+.section-headline {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 0 40px;
+  /* 上、左右、下の順 */
+}
+
+.section-button {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* about */
+
+.about {
+  margin: 0;
+  display: flex;
+}
+
+.about-caption {
+  margin-left: 15px;
+}
+
+.about-headline {
+  margin: 0 0 20px;
+  font-size: 30px;
+}
+
+/* Feature */
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* ulタグの初期化 */
+  padding: 0;
+  margin: 0;
+}
+
+.grid-item {
+  /* background-color: red; */
+  list-style: none;
+}
+
+/* 要素を横並びにするときに使い回しをするためのもの 
+.grid-col-4 > .grid-item　は　grid-item内の.grid-col-4(要素が四つ）の場合、それぞれ４分割のような流れ*/
+
+.grid-col-4 > .grid-item {
+  width: 25%;
+}
+
+.grid-col-3 > .grid-item {
+  width: 33.3%;
+}
+.grid-col-2 > .grid-item {
+  width: 50%;
+}
+
+.feature {
+  text-align: center;
+  padding: 0 15px;
+}
+
+.feature-headline {
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+
+.feature-image {
+  margin: 0 0 20px;
+}
+
+.feature-description {
+  margin: 0;
+}
+
+.card {
+  padding: 0 10px;
+}
+
+.card-link {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  transition: background-color 0.1s;
+}
+.card-link:hover {
+  background-color: #eeeeee;
+}
+
+.card-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #efefef;
+  color: #333;
+}
+
+.card-img {
+  /* imgタグでよくある形 */
+  /* 親要素の横幅はブロック要素なので要素いっぱい */
+  width: 100%;
+  height: auto;
+}
+
+/* .card-info {
+} */
+
+.card-headline {
+  margin: 0;
+}
+
+.card-description {
+  margin: 0;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.avatar-name {
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.avatar-image {
+  margin: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* button */
+
+.button {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #333;
+  text-align: center;
+  padding: 15px 60px;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 #bbb;
+  transition: box-shadow 0.5s;
+  transition: margin 0.1s;
+}
+
+.button:hover {
+  box-shadow: 0 0 0;
+  margin: 3px 0 0 3px;
+}
