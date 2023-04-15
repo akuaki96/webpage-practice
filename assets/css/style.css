@@ -11,7 +11,48 @@ body {
   color: #333;
 }
 
+label,
+input,
+textarea,
+select,
+button {
+  cursor: pointer;
+}
 /* section */
+
+button {
+  border: 0;
+}
+
+/*  grid*/
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* ulタグの初期化 */
+  padding: 0;
+  margin: 0;
+}
+
+.grid-item {
+  /* background-color: red; */
+  list-style: none;
+}
+
+/* 要素を横並びにするときに使い回しをするためのもの 
+  .grid-col-4 > .grid-item　は　grid-item内の.grid-col-4(要素が四つ）の場合、それぞれ４分割のような流れ*/
+
+.grid-col-4 > .grid-item {
+  width: 25%;
+}
+
+.grid-col-3 > .grid-item {
+  width: 33.3%;
+}
+.grid-col-2 > .grid-item {
+  width: 50%;
+}
 
 .section {
   padding: 30px 15px;
@@ -32,6 +73,37 @@ body {
 .section-button {
   margin-top: 40px;
   text-align: center;
+  padding-bottom: 0.2em;
+}
+
+/* hero */
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero > strong {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 120px;
+  color: #fff;
+  font-weight: bold;
+  /* strongタグはインライン要素 */
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.hero > video {
+  position: absolute;
+  z-index: -1;
+  width: auto;
+  height: 105%;
 }
 
 /* about */
@@ -51,34 +123,6 @@ body {
 }
 
 /* Feature */
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* ulタグの初期化 */
-  padding: 0;
-  margin: 0;
-}
-
-.grid-item {
-  /* background-color: red; */
-  list-style: none;
-}
-
-/* 要素を横並びにするときに使い回しをするためのもの 
-.grid-col-4 > .grid-item　は　grid-item内の.grid-col-4(要素が四つ）の場合、それぞれ４分割のような流れ*/
-
-.grid-col-4 > .grid-item {
-  width: 25%;
-}
-
-.grid-col-3 > .grid-item {
-  width: 33.3%;
-}
-.grid-col-2 > .grid-item {
-  width: 50%;
-}
 
 .feature {
   text-align: center;
@@ -169,12 +213,129 @@ body {
   padding: 15px 60px;
   text-decoration: none;
   border-radius: 5px;
-  box-shadow: 5px 5px 0 #bbb;
-  transition: box-shadow 0.5s;
-  transition: margin 0.1s;
+  box-shadow: 0px 4px 0px #bbb;
+  transition: box-shadow 0.3s;
+  transition: transform 0.1s;
 }
 
 .button:hover {
-  box-shadow: 0 0 0;
-  margin: 3px 0 0 3px;
+  background-color: #3e3e3e;
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.button.submission {
+  background-color: #92d3ca;
+}
+
+/* .select .input .radio  .textarea*/
+
+.select {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  min-width: 500px;
+}
+
+.input {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  min-width: 500px;
+}
+
+.radio {
+  margin: 0 10px;
+}
+
+.textarea {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  min-width: 500px;
+  min-height: 100px;
+}
+
+/* form */
+
+.form-table {
+  margin: 0 auto;
+}
+
+.form-table th {
+  padding: 10px;
+  text-align: left;
+}
+
+.form-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.works {
+  margin: 40px 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.works > img {
+  margin: 0 15px;
+}
+
+/* footer */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+}
+
+/* figureタグはデフォルトでマージンが入ってる */
+.footer-map {
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-map > iframe {
+  width: 60%;
+}
+
+.footer-mapinfo {
+  width: 40%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.footer-maplogo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.footer-maplogo > svg {
+  fill: transparent;
+  margin-right: 10px;
+}
+
+.footer-mapaddress {
+  font-style: normal;
+}
+
+.footer-mapaddress > a {
+  color: #fff;
+  /* text-decoration: none; */
+}
+
+.footer-line {
+  border-color: #444;
+}
+
+.footer-copy {
+  display: block;
+  text-align: center;
+  padding: 10px;
 }
