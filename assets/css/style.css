@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* 文字コードの判別 */
 
+/* レスポンシブ
+横幅が768px以内の時に適用するスタイル */
+@media screen and (max-width: 768px) {
+}
+
 /* ベースのスタイル */
 body {
   font-family: "Noto Sans JP", "Helvetica Neue", Arial,
@@ -54,6 +59,19 @@ button {
   width: 50%;
 }
 
+@media screen and (max-width: 768px) {
+  .grid {
+    display: block;
+  }
+
+  .grid-col-4 > .grid-item,
+  .grid-col-3 > .grid-item,
+  .grid-col-2 > .grid-item {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
 .section {
   padding: 30px 15px;
 }
@@ -74,6 +92,18 @@ button {
   margin-top: 40px;
   text-align: center;
   padding-bottom: 0.2em;
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 20px 10px;
+  }
+
+  .section-headline {
+    font-size: 30px;
+    margin: 0 0 20px;
+    /* 上、左右、下の順 */
+  }
 }
 
 /* header */
@@ -120,6 +150,12 @@ button {
   border-bottom: 2px solid #333;
 }
 
+@media screen and (max-width: 768px) {
+  .header {
+    font-size: 12px;
+  }
+}
+
 /* hero */
 .hero {
   width: 100%;
@@ -150,6 +186,12 @@ button {
   height: 105%;
 }
 
+@media screen and (max-width: 768px) {
+  .hero > strong {
+    font-size: 50px;
+  }
+}
+
 /* about */
 
 .about {
@@ -164,6 +206,22 @@ button {
 .about-headline {
   margin: 0 0 20px;
   font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    display: block;
+  }
+
+  .about-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-headline {
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 /* Feature */
@@ -303,6 +361,15 @@ button {
   min-height: 100px;
 }
 
+@media screen and (max-width: 768px) {
+  .select,
+  .input,
+  .textarea {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
 /* form */
 
 .form-table {
@@ -319,6 +386,17 @@ button {
   margin-top: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .form-table,
+  .form-table tbody,
+  .form-table tr,
+  .form-table th,
+  .form-table td {
+    display: block;
+  }
+}
+
+/* works */
 .works {
   margin: 40px 0;
   padding: 20px;
@@ -327,6 +405,18 @@ button {
 
 .works > img {
   margin: 0 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .works {
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+  .works > img {
+    width: 100px;
+    margin: 5px;
+  }
 }
 
 /* footer */
@@ -352,7 +442,6 @@ button {
 .footer-mapinfo {
   width: 40%;
   padding: 15px;
-  box-sizing: border-box;
 }
 
 .footer-maplogo {
@@ -382,4 +471,20 @@ button {
   display: block;
   text-align: center;
   padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-map {
+    padding: 15px;
+    display: block;
+  }
+
+  .footer-map > iframe {
+    width: 100%;
+    height: 200px;
+  }
+  .footer-mapinfo {
+    width: 100%;
+    text-align: center;
+  }
 }
